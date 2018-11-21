@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         //set images to nil for all the buttons
         for i in 1...9 {
             if let button = self.view.viewWithTag(i) as? UIButton {
-                button.setImage(nil, forState: UIControlState.Normal)
+                button.setImage(nil, for: .normal)
             }
         }
         resultLabel.text = ""
@@ -50,9 +50,9 @@ class ViewController: UIViewController {
                 
                 gameCount += 1
                 
-                button.setImage(UIImage(named: "nought.png"), forState: UIControlState.Normal)
+                button.setImage(UIImage(named: "nought.png"), for: .normal)
                 
-                checkForWinOrDraw(activePlayer);
+                checkForWinOrDraw(activePlayer: activePlayer);
                 
                 activePlayer = 2
                 
@@ -63,9 +63,9 @@ class ViewController: UIViewController {
                 
                 gameCount += 1
                 
-                button.setImage(UIImage(named: "cross.png"), forState: UIControlState.Normal)
+                button.setImage(UIImage(named: "cross.png"), for: .normal)
                 
-                checkForWinOrDraw(activePlayer);
+                checkForWinOrDraw(activePlayer: activePlayer);
                 
                 activePlayer = 1
                 
